@@ -1,0 +1,43 @@
+<template name="home">
+	    <div>
+        <div><h5 id="runstate">State: Stopped</h5></div>
+        <input id="runButton" class='nosel but' type="button" value="Run">
+        <input id="stopButton" class='nosel but' type="button" value="Stop">
+        <input id="testButton" class='nosel but' type="button" value="Test A">
+        <input id="testButton1" class='nosel but' type="button" value="Test B">
+        <input id="addrulebutton" class='nosel but' type="button" value="Add">
+        <!-- <div id="gallery"> -->
+
+        <table>
+            <tr>
+                <td>
+                    <div id="box1" style="width:16px; height:16px;border:1px;background-color:gray">
+                        &nbsp;
+                    </div>
+                </td>
+                <td>
+                    <div id="beaconLine">
+                        Beacon data.
+                    </div>
+                </td>
+            </tr>
+        </table> 
+    </div>
+    <br>
+    <br>
+    <div ontouchend="closeRules()">
+        <br id="endOfRulesList">
+        <br>
+        <!--
+        <input id="testbutton" type="button" value="Test" onmousedown="RF.redit.dispParseTree()">
+        -->
+
+        <div id="stage">
+            <div>
+                <iframe width='720' height='568' id='stagef'></iframe>
+            </div>
+        </div>
+
+    </div>  
+
+</template>

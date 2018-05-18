@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 import Being from './Being.js';
+import {Rule} from '../../engine/Rule.jsx';
+
+var ruleJ = {"_rule": "Master"};
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -20,9 +23,9 @@ export default class App extends Component {
     ];
   }
 
-  renderBeings() {
-    return this.getBeings().map((being) => ( 
-      <Being key = { being._id} being = { being } />
+  renderSentences() {
+    return this.getBeings().map((rule) => ( 
+      <Rule key = { rule._id} json = { ruleJ } />
     ));
   }
 
@@ -30,12 +33,11 @@ export default class App extends Component {
     return ( 
     <div className = "container" >
       <header>
-        <h1> Being Timeline </h1> 
+        <h1> Sentence Editor </h1> 
       </header>
-        <ul> 
-          { this.renderBeings()}
-        </ul> 
+          { this.renderSentences()}
       </div>
+      
     );
   }
 }
