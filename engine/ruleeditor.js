@@ -386,15 +386,12 @@ Red.prototype.clickFun = function (e) {
         this.removeChildRule(ruleSlot.slot, ruleSlot.name);
 
         $(ruleSlot.slot).after(compiledRule);
-/*
+
         $(" .sent li").unbind("click");
-
-        var that = this;
-        // a hack until we generate menus from templates.
-        var clicker = function (e) {
-            return that.clickFun(e);
-        }
-
+        $('.sent li').on('click', function(elem, templ) {
+    	  RF.redit.clickFun(elem, templ);
+    	 });
+/*
         $(" .sent li").click(clicker);
         $(" .sent li").hover(function () {
 //        	  console.log("Hover visible");
@@ -467,7 +464,7 @@ Red.prototype.setupMenu = function () {
             walkUp = walkPar;
         }
 
-        //  return that.clickFun(e);
+         return that.clickFun(e);
     }
 
     $(".closeBox").click(closer);
@@ -865,3 +862,4 @@ Red.prototype.setupGallery = function () {
     $(".senPro").draggable({opacity: 0.8, helper: "clone", stop: handleDragStop});
     $("#center").droppable({drop: handleDropEvent});
 }
+

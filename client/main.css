@@ -4,11 +4,3 @@ h1{
   color: #9C27B0;
   font-size: 3em;
 }
-
-ul{
-  list-style-type: none;
-}
-li{
-  padding: 3em;
-  border-bottom: solid #9C27B0 2px ;
-}

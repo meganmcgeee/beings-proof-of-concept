@@ -191,3 +191,6 @@ aRuleGallery = ruleElems;
 // $.each(ruleCache, function(k,v) {console.log(k + " " + v.toBNF())});
 
 
+
+
+LoadTheRules();
