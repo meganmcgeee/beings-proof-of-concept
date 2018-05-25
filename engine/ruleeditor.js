@@ -593,10 +593,10 @@ Red.prototype.genRuleMenu = function (lfs) {
             pos = ruleStack.pop();
             ruleName = ruleStack.pop();
         }
-        if (pos >= activeRule.rulePattern.length && ruleStack.length == 0) {
-            // Insert close box if we are now at top
-            sb.push("<li>.<img class='closeBox' src='/images/closeboxL.png'></li>");
-        }
+        // if (pos >= activeRule.rulePattern.length && ruleStack.length == 0) {
+        //     // Insert close box if we are now at top
+        //     sb.push("<li>.<img class='closeBox' src='/images/closeboxL.png'></li>");
+        // }
 
     } while (ruleStack.length !== 0);
     sb.push("</ul>");
