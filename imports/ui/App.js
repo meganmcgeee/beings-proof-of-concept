@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
-import Being from './Being.js';
+// import Being from './Being.js';
 import {Rule} from '../../engine/Rule.jsx';
+import Webcam from 'react-webcam';
 
 const ruleJ = {"_rule": "Master"};
+// cam
+
 
 // App component - represents the whole app
 export default class App extends Component {
   getBeings() {
     return [{
         _id: 1,
-        // text: 'This is Being 1'
       }
     ];
   }
@@ -26,6 +28,7 @@ export default class App extends Component {
     <div className = "container" >
       <header>
       </header>
+        <Webcam/>
           { this.renderSentences()}
       </div>
       
