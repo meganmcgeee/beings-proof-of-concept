@@ -28,8 +28,14 @@ export default class App extends Component {
     <div className = "container" >
       <header>
       </header>
-        <Webcam/>
-          { this.renderSentences()}
+       { this.renderSentences()}
+        <Webcam
+          audio={false}
+          height={350}
+          ref={this.setRef}
+          screenshotFormat="image/jpeg"
+          width={400}/>
+           <button onClick={this.capture}>Capture photo</button>
       </div>
       
     );

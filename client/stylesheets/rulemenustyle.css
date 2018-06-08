@@ -1,19 +1,39 @@
 body{
     background-color: #FBB426! important;
 }
+#sentence-editor{
+position: relative;
+}
 .outBox{
-  margin-top: 10em;  
+  margin-top: 10em;
+  margin-left: 2em;
+  position: absolute;
+}
+
+ul{
+    list-style-type: none;
+}
+
+button{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    border: none;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+
 }
 .sent{
 font-size:1.2em;
 font-family:Verdana, Arial, Helvetica, sans-serif;
-
 }
 
 .sent, .sent ul{
 margin:0;
 padding:0;
-list-style-type: square;
+list-style-type: none;
 list-style-position:outside;
 position:relative;
 line-height: 1.2em;
