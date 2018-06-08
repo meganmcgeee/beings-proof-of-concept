@@ -2,7 +2,7 @@ import { Button, Col, ControlLabel, FormControl, FormGroup, Row } from 'react-bo
 
 import { Link } from 'react-router';
 import React from 'react';
-import handleLogin from '../../modules/login';
+import handleLogin from '../../../modules/login';
 
 export default class Login extends React.Component {
   componentDidMount() {
