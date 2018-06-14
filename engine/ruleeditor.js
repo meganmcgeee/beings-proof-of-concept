@@ -18,7 +18,6 @@ Red.prototype.addRule = function (rString, rFun) {
 
 }
 InputItem = function(itemN, itemT, itemS) {
-
     this.itemName = itemN;
     this.itemType = itemT;
     this.itemStyle = itemS;
@@ -28,6 +27,10 @@ InputItem = function(itemN, itemT, itemS) {
 InputItem.prototype.name = function () {
     return this.itemName;
 }
+
+
+// View? attached input class to dom element?- MM
+
 
 InputItem.prototype.toHtml = function (val) {
     var sb = new Array();
@@ -82,7 +85,7 @@ RuleList.prototype.toBNF = function () {
 RuleList.prototype.addListData = function (fname) {
     this.listData.push(fname);
 }
-
+// View end ? attached input class to dom element?- MM
 function generateUniqueSlotName(usedList, proposed, position) {
     var possible = proposed;
     var num = 1;
@@ -194,7 +197,7 @@ Rule.prototype.toGalleryEntry = function () {
     return sb.join("");
 }
 
-
+// View Data Slot- MM
 Rule.prototype.toInnerRuleHtml = function (parentSlot) {
     var sb = [];
     for (var i = 0; i < this.rulePattern.length; ++i) {
@@ -278,7 +281,7 @@ var dumpTree = function (elem) {
         obj = obj.parentNode;
     }
 }
-
+// What are you, Dumper?
 var dumper = function (obj, lvl) {
 
     var tabF = function (n) {
