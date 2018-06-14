@@ -2,42 +2,42 @@ import React, { PropTypes } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import AppNavigation from '../components/AppNavigation';
-import Beings from '../pages/Beings';
+import Authenticated from '../pages/Authenticated/Authenticated';
+import Beings from '../pages/Beings/Beings';
+import { ControlledCarousel } from '../components/ControlledCarousel/ControlledCarousel'
 import { Grid } from 'react-bootstrap';
-import Index from '../pages/Index';
-// import EditDocument from '../containers/EditDocument';
-// import ViewDocument from '../containers/ViewDocument';
-import Login from '../pages/Login';
+import Index from '../pages/Index/Index';
+// import EditBeing from '../containers/EditBeing';
+// import ViewBeing from '../containers/ViewBeing';
+import Login from '../pages/Login/Login';
 import {Meteor} from 'meteor/meteor';
-import NewBeing from '../pages/NewBeing';
-import NotFound from '../pages/NotFound';
-import RecoverPassword from '../pages/RecoverPassword';
-import ResetPassword from '../pages/ResetPassword';
-import { compose } from 'react-komposer';
+import NewBeing from '../pages/NewBeing/NewBeing';
+import NotFound from '../pages/NotFound/NotFound';
+import RecoverPassword from '../pages/RecoverPassword/RecoverPassword';
+import ResetPassword from '../pages/ResetPassword/ResetPassword';
+
+// import { compose } from 'react-komposer';
 
 const App = appProps => (
-  <div>
-    <Router>
-      <div className="App">
-        <AppNavigation {...appProps} />
-        <Grid>
-          <Switch>
-            <Route exact name="index" path="/" component={Index} />
-            <Authenticated exact path="/beings" component={Beings} {...appProps} />
-            <Authenticated exact path="/beings/new" component={NewBeing} {...appProps} />
-            <Authenticated exact path="/beings/:_id" component={ViewBeing} {...appProps} />
-            <Authenticated exact path="/beings/:_id/edit" component={EditBeing} {...appProps} />
-            <Public path="/signup" component={Signup} {...appProps} />
-            <Public path="/login" component={Login} {...appProps} />
-            <Route name="recover-password" path="/recover-password" component={RecoverPassword} />
-            <Route name="reset-password" path="/reset-password/:token" component={ResetPassword} />
-            <Route component={NotFound} />
-          </Switch>
-        </Grid>
-        <h1>Hi.</h1>
-      </div>
-    </Router>
-  </div>  
+  <Router>
+    <div className="App">
+      <AppNavigation {...appProps} />
+      <Grid>
+        <Switch>
+          <Route exact name="index" path="/" component={Index} />
+          <Authenticated exact path="/beings" component={Documents} {...appProps} />
+          <Authenticated exact path="/beings/new" component={NewDocument} {...appProps} />
+          <Authenticated exact path="/beings/:_id" component={ViewDocument} {...appProps} />
+          <Authenticated exact path="/beings/:_id/edit" component={EditDocument} {...appProps} />
+          <Public path="/signup" component={Signup} {...appProps} />
+          <Public path="/login" component={Login} {...appProps} />
+          <Route name="recover-password" path="/recover-password" component={RecoverPassword} />
+          <Route name="reset-password" path="/reset-password/:token" component={ResetPassword} />
+          <Route component={NotFound} />
+        </Switch>
+      </Grid>
+    </div>
+  </Router>
 );
 
 App.propTypes = {
@@ -54,7 +54,5 @@ const composer = (props, onData) => {
 };
 
 export default App;
-
-
 
 

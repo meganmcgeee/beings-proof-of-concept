@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
-
-
- class Rule extends Component {
+class Rule extends Component {
 
 	componentDidMount() {
 	
@@ -20,5 +18,4 @@ import React, { Component } from 'react';
 	}
 };
 
-
-export {Rule};
+export { Rule};

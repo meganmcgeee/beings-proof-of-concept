@@ -3,15 +3,15 @@
 import { IndexRoute, Route, Router, browserHistory } from 'react-router';
 
 import App from '../../ui/layouts/App.js';
-import Index from '../../ui/pages/Index.js';
-import Login from '../../ui/pages/Login.js';
+import Index from '../../ui/pages/Index/Index.js';
+import Login from '../../ui/pages/Login/Login.js';
 import { Meteor } from 'meteor/meteor';
-import NewBeing from '../../ui/pages/NewBeing.js';
-// import NotFound from '../../ui/pages/NotFound.js';
+import NewBeing from '../../ui/pages/NewBeing/NewBeing.js';
+import NotFound from '../../ui/pages/NotFound/NotFound.js';
 import React from 'react';
 import RecoverPassword from '../../ui/pages/RecoverPassword.js';
-import ResetPassword from '../../ui/pages/ResetPassword.js';
-import Signup from '../../ui/pages/Signup.js';
+import ResetPassword from '../../ui/pages/ResetPassword/ResetPassword.js';
+import Signup from '../../ui/pages/Signup/Signup.js';
 import { render } from 'react-dom';
 
 const authenticate = (nextState, replace) => {
