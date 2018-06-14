@@ -593,10 +593,10 @@ Red.prototype.genRuleMenu = function (lfs) {
             pos = ruleStack.pop();
             ruleName = ruleStack.pop();
         }
-        if (pos >= activeRule.rulePattern.length && ruleStack.length == 0) {
-            // Insert close box if we are now at top
-            sb.push("<li>.<img class='closeBox' src='/images/closeboxL.png'></li>");
-        }
+        // if (pos >= activeRule.rulePattern.length && ruleStack.length == 0) {
+        //     // Insert close box if we are now at top
+        //     sb.push("<li>.<img class='closeBox' src='/images/closeboxL.png'></li>");
+        // }
 
     } while (ruleStack.length !== 0);
     sb.push("</ul>");
@@ -776,7 +776,7 @@ Red.prototype.ruleToHTML = function (valSet, forId, ruleNumber) {
     var ruleGuts = this.genRuleMenu(valSet);
 
     sb = [];
-    sb.push("<table class='outBox' style='z-index:");
+    sb.push("<div id='sentence-editor'><table class='outBox' style='z-index:");
 
     sb.push(10000 - ruleNumber); // {{{ruleDepth}}}
 
@@ -785,7 +785,7 @@ Red.prototype.ruleToHTML = function (valSet, forId, ruleNumber) {
     sb.push(forId); //  {{{ruleId}}}
     sb.push("'>");
     sb.push(ruleGuts); // {{{ruleBody}}}
-    sb.push("</td></tr></table>");
+    sb.push("</td></tr></table></div>");
 
     //   var ruleContext = {ruleId: thisRuleIdStr, ruleBody: ruleGuts, ruleDepth: this.ruleDepthCtr--};
     var ruleHTML = sb.join("");

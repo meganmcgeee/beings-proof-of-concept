@@ -5,12 +5,26 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.49",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.5",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
     "meteor-node-stubs": "^0.3.2",
-    "react": "16.0.0-alpha.12",
-    "react-dom": "16.0.0",
-    "react-native": "^0.46.4",
-    "react-native-meteor": "^1.2.0"
+    "react": "^15.6.2",
+    "react-addons-create-fragment": "^15.6.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-addons-linked-state-mixin": "^15.6.2",
+    "react-addons-perf": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-addons-transition-group": "^15.6.2",
+    "react-addons-update": "^15.6.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^15.6.2",
+    "react-komposer": "^2.0.0",
+    "react-native-camera": "^1.1.4",
+    "react-router-dom": "^4.3.1",
+    "react-webcam": "^0.5.0"
   }
 }
